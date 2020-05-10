@@ -12,5 +12,6 @@ public class Main {
         System.out.println("");
         honda.cariPegawai("");
 //        honda.cariPegawai("budi");
+        System.out.println("TEST");
     }
 }
