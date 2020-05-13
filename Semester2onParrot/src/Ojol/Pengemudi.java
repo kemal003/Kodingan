@@ -48,6 +48,10 @@ public abstract class Pengemudi implements Comparable{
 
     @Override
     public String toString() {
+        String result="";
+        result+=String.format("Tipe kendaraan: %s", getJenisModa());
+        result+=String.format("Nama pengemudi: %s\n", nama);
+
         return "Pengemudi{" +
                 "kendaraan=" + getJenisModa() +
                 ", xPengemudi=" + xPengemudi +
