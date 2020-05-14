@@ -66,8 +66,8 @@ public class Pesanan implements Pembayaran{
     }
 
     public boolean isLokasiAda() {
-        if (penumpang.getxJemput()!=0 && penumpang.getyJemput()!=0){
-            if (penumpang.getxTujuan()!=0 && penumpang.getyTujuan()!=0){
+        if (penumpang.isSudahAntar()){
+            if (penumpang.isSudahJemput()){
                 return true;
             }
             else return false;

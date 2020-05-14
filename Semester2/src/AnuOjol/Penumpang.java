@@ -5,6 +5,15 @@ public class Penumpang {
     private double xJemput, yJemput;
     private double xTujuan, yTujuan;
     private OPO opo;
+    private boolean sudahJemput, sudahAntar;
+
+    public boolean isSudahJemput() {
+        return sudahJemput;
+    }
+
+    public boolean isSudahAntar() {
+        return sudahAntar;
+    }
 
     public Penumpang() {
         opo = new OPO();
@@ -41,12 +50,14 @@ public class Penumpang {
     public void setJemput(double xJemput, double yJemput) {
         this.xJemput = xJemput;
         this.yJemput = yJemput;
+        sudahJemput = true;
         System.out.println(String.format("Lokasi jemput berhasil diset ke : (%.1f ; %.1f)", this.xJemput, this.yJemput));
     }
 
     public void setTujuan(double xTujuan, double yTujuan) {
         this.xTujuan = xTujuan;
         this.yTujuan = yTujuan;
+        sudahAntar = true;
         System.out.println(String.format("Lokasi tujuan berhasil diset ke : (%.1f ; %.1f)", this.xTujuan, this.yTujuan));
     }
 
