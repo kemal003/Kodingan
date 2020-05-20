@@ -23,11 +23,12 @@ public class Main {
         System.out.println("1. laki-laki");
         System.out.println("2. perempuan");
         System.out.print("Pilihan: "); pilihan = sos.nextInt();
+        sos.nextLine();
         if (pilihan == 1) pegawaiBaru.add(new PegawaiPria(nama, true, umur));
         else pegawaiBaru.add(new PegawaiWanita(nama, false, umur));
 
         System.out.println("Adakah pegawai lain yang ingin ditambahkan?");
-        System.out.println("Ya / Tidak : "); String option = sos.nextLine();
+        System.out.print("Ya / Tidak : "); String option = sos.nextLine();
         if (option.equalsIgnoreCase("Ya")) lanjut = true;
         else lanjut = false;
         while (lanjut) {
@@ -38,16 +39,17 @@ public class Main {
             System.out.println("1. laki-laki");
             System.out.println("2. perempuan");
             System.out.print("Pilihan: "); pilihan = sos.nextInt();
+            sos.nextLine();
             if (pilihan == 1) pegawaiBaru.add(new PegawaiPria(nama, true, umur));
             else pegawaiBaru.add(new PegawaiWanita(nama, false, umur));
             System.out.println("Adakah pegawai lain yang ingin ditambahkan?");
-            System.out.println("Ya / Tidak : "); option = sos.nextLine();
+            System.out.print("Ya / Tidak : "); option = sos.nextLine();
             if (option.equalsIgnoreCase("Ya")) lanjut = true;
             else lanjut = false;
         }
         System.out.println("LIST PEGAWAI BARU");
         for (int i = 0; i < pegawaiBaru.size(); i++) {
-            System.out.println(pegawaiBaru.get(i));
+            System.out.print(pegawaiBaru.get(i));
             System.out.println();
         }
     }

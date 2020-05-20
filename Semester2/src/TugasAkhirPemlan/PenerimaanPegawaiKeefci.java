@@ -35,7 +35,7 @@ public abstract class PenerimaanPegawaiKeefci {
         return gajipokok;
     }
 
-    public abstract void cetakBonus();
+    public abstract String cetakBonus();
 
     public abstract String jabatanPegawai();
 
@@ -43,6 +43,7 @@ public abstract class PenerimaanPegawaiKeefci {
     public String toString() {
         return "Nama Pegawai: " +getNamaCalonPegawai()+"\nJenis Kelamin: "+getJeniskelamin()+
                 "\nJabatan Tersedia: "+jabatanPegawai()+"\nUmur: "+getUmurpegawai()+
-                "\n"+String.format("Gaji: Rp. %,d", getGajiPegawai())+"\nPeralatan yang diberikan: ";
+                "\n"+String.format("Gaji: Rp. %,.0f", getGajiPegawai())+"\nPeralatan yang diberikan: \n"+
+                cetakBonus();
     }
 }

@@ -32,7 +32,7 @@ public class Pesanan implements Pembayaran{
         return penumpang;
     }
 
-    public ArrayList getPengemudiFix() {
+    public ArrayList<Pengemudi> getPengemudiFix() {
         return pengemudiFix;
     }
 

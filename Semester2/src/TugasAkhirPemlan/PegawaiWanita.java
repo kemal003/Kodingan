@@ -23,9 +23,11 @@ public class PegawaiWanita extends PenerimaanPegawaiKeefci implements Jabatan {
     }
 
     @Override
-    public void cetakBonus() {
+    public String cetakBonus() {
+        String hasil="";
         for (int i = 0; i < bonuskerja.length; i++) {
-            System.out.println("- " + bonuskerja[i]);
+            hasil+=("- " + bonuskerja[i] + "\n");
         }
+        return hasil;
     }
 }
